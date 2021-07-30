@@ -1,17 +1,43 @@
 // https://www.acmicpc.net/problem/1920
-/*
- * 계속 시간초과가 떠서 구글링을 해보니 Set 자료구조의 탐색 시간이 빠르다는 사실을 알았다.
- * BufferedReader를 이용하여 input 시간을 줄이는 것도 좋을 것 같다.
+
+/*  0. 이중 for문으로는 시간 초과
+ *  1. HashSet, BufferReader 등을 통해 처리 시간 단축
+ *  2. 검색을 통해 이분 탐색 내장 함수를 찾아서 시간 단축
+ *  
+ *  +. 나중에 직접 정렬 혹은 이분 탐색 구현해보기
  */
 
-import java.util.HashSet;
+import java.util.Arrays;
 import java.util.Scanner;
-import java.util.Set;
 
 public class FindNum_1920 {
 
 	public static void main(String[] args) {
 		
+		// 이분탐색 내장 라이브러리 사용
+		int N, M;
+		int[] arr;		
+		Scanner sc = new Scanner(System.in);
+		
+		N = sc.nextInt();
+		arr = new int[N];
+		for (int i = 0; i < N; i++) {
+			arr[i] = sc.nextInt();
+		}
+		
+		Arrays.sort(arr);
+		M = sc.nextInt();
+		for (int i = 0; i < M; i++) {
+			int temp = sc.nextInt();
+			if (Arrays.binarySearch(arr, temp) >= 0) {
+				System.out.println("1");
+			} else {
+				System.out.println("0");
+			}
+		}		
+		
+		
+		/* HashSet을 이용한 시간 단축 코드 : Set의 contains 탐색은 시간이 적게 든다.
 		int N, M;
 		Set<Integer> set = new HashSet<>();
 		Scanner sc = new Scanner(System.in);
@@ -30,8 +56,10 @@ public class FindNum_1920 {
 				System.out.println("0");
 			}
 		}
+		*/
 		
-		/*
+		
+		/* 시간 초과 코드
 		int N, M;
 		int[] arr;		
 		Scanner sc = new Scanner(System.in);
@@ -58,26 +86,5 @@ public class FindNum_1920 {
 			}
 		}
 		*/
-		
-		/*
-		int N, M;
-		List<Integer> list = new ArrayList<>();
-		Scanner sc = new Scanner(System.in);
-		
-		N = sc.nextInt();
-		for (int i = 0; i < N; i++) {
-			list.add(sc.nextInt());
-		}
-		
-		M = sc.nextInt();
-		for (int i = 0; i < M; i++) {
-			int temp = sc.nextInt();
-			if (list.contains(temp)) {
-				System.out.println("1");
-			}
-			else {
-				System.out.println("0");
-			}
-		}*/		
 	}
 }
