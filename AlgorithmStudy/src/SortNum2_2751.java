@@ -6,7 +6,7 @@
  * 시간초과를 피하기 위해 시도해본 것
  * - 분할 파트와 합병 파트 분리
  * - System.arraycopy : copyOfRange와 같은 메서드였다
- * - StringBuilder : 없이는 O(log2n)을 구현해도 계속 시간초과가 나서  사용
+ * - StringBuilder : O(log2n)을 구현해도 계속 시간초과가 나서  사용
  * 
  * 실수했던 것
  * - divide 메서드를 실행만 하고 대입하지 않음
