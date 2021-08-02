@@ -1,14 +1,11 @@
 // https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV13zo1KAAACFAYh
 
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.util.Arrays;
 import java.util.Scanner;
 
 public class Mode_1204 {
 
-	public static void main(String[] args) throws FileNotFoundException {
-		System.setIn(new FileInputStream("input.txt"));
+	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		
 		int[] arr = new int[101];
@@ -22,7 +19,7 @@ public class Mode_1204 {
 			int maxNum = -1;
 			int maxCount = 0;
 			for (int j = 0; j < 101; j++) {
-				if (arr[j] > maxCount) {
+				if (arr[j] >= maxCount) {
 					maxCount = arr[j];
 					maxNum = j;
 				}
