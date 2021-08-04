@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class Ladder1_1210 {
 	public static void main(String[] args) throws FileNotFoundException {
-		System.setIn(new FileInputStream("input.txt"));
+//		System.setIn(new FileInputStream("input.txt"));
 		Scanner sc = new Scanner(System.in);
 		int[][] ladder = new int[100][100];
 		int nowX = -1, nowY = -1;
@@ -18,7 +18,7 @@ public class Ladder1_1210 {
 			for (int y = 0; y < 100; y++) {
 				for (int x = 0; x < 100; x++) {
 					ladder[y][x] = sc.nextInt();
-					if (ladder[y][x] == 2) {
+					if (ladder[y][x] == 2) {	// 	=> y == 99 일때만 체크하도록 수정
 						nowX = x;
 						nowY = y;
 					}
@@ -38,6 +38,7 @@ public class Ladder1_1210 {
 					} while (nowX - 1 >= 0 && ladder[nowY][nowX - 1] == 1);
 				}
 				
+				// 좌우 이동이 끝났을 경우, 혹은 통로가 없을 경우 위로 이동
 				nowY--;
 			}
 

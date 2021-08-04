@@ -8,7 +8,7 @@ import java.io.InputStreamReader;
 public class Queue_10845 {
 
 	public static void main(String[] args) throws IOException {
-		System.setIn(new FileInputStream("input.txt"));
+//		System.setIn(new FileInputStream("input.txt"));
 		BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
 		int[] myQueue = new int[10000];
 		int start = 0;
