@@ -9,7 +9,7 @@ import java.util.Scanner;
 public class PWGenerator_1225 {
 
 	public static void main(String[] args) throws FileNotFoundException {
-		System.setIn(new FileInputStream("input.txt"));
+//		System.setIn(new FileInputStream("input.txt"));
 		Scanner sc = new Scanner(System.in);
 		
 		for (int t = 0; t < 10; t++) {
