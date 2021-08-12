@@ -30,6 +30,7 @@ public class ArraySpin3_16935 {
 		// 연산 수행
 		for (int op : ops) {
 			switch (op) {
+			
 			case 1:			// 상하 반전 : 맨 윗줄부터 맨 아랫줄과 swap
 				for (int y = 0; y < yLen/2; y++) {
 					int[] temp = arr[y];
@@ -136,6 +137,5 @@ public class ArraySpin3_16935 {
 			}
 			System.out.println();
 		}
-
 	}
 }
