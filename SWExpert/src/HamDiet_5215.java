@@ -1,5 +1,7 @@
 // https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWT-lPB6dHUDFAVT
 
+// 부분집합을 사용한 풀이
+
 import java.util.Scanner;
 
 public class HamDiet_5215 {
