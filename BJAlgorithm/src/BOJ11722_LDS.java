@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.StringTokenizer;
 
-public class BOJ11722_LongestDecreasing {
+public class BOJ11722_LDS {
 	public static void main(String[] args) throws IOException {
 		BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
 		int N = Integer.parseInt(in.readLine());
@@ -33,23 +33,5 @@ public class BOJ11722_LongestDecreasing {
 				max = dp[i];
 		}
 		System.out.println(max);
-		
-		/*
-		ArrayList<Integer> dp = new ArrayList<>();
-		dp.add(nums.get(0));
-		
-		for (int i = 1; i < N; i++) {
-			int num = nums.get(i);
-			if (num > dp.get(dp.size() - 1))
-				dp.add(num);
-			else {
-				for (int j = 0; j < dp.size(); j++) {
-					if (num <= dp.get(j))
-						dp.set(j, num);
-				}
-			}
-		}
-		
-		System.out.println(dp.size());*/
 	}
 }
