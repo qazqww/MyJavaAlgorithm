@@ -3,6 +3,7 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.Arrays;
 
 public class BOJ2579_StairClimb {
 	public static void main(String[] args) throws IOException {
@@ -14,33 +15,29 @@ public class BOJ2579_StairClimb {
 			stairs[i] = Integer.parseInt(in.readLine());
 		}
 		
-		if (N == 1) {
-			System.out.println(stairs[0]);
-			return;
-		}
-		else if (N == 2) {
-			System.out.println(stairs[0] + stairs[1]);
-			return;
-		}
-		else if (N == 3) {
-			System.out.println(Math.max(stairs[0] + stairs[2], stairs[1] + stairs[2]));
-			return;
-		}
-		
 		int[] dp = new int[N];
-		dp[0] = stairs[0];
-		dp[1] = stairs[0] + stairs[1];
-		dp[2] = Math.max(stairs[0] + stairs[2], stairs[1] + stairs[2]);
 		
-		for (int i = 3; i < N-1; i++) {
-			int result1 = dp[i-3] + stairs[i-1] + stairs[i];
-			int result2 = dp[i-2] + stairs[i];
-			int result3 = dp[i-1];
-			int max = Math.max(result1, result2);
-			max = Math.max(max, result3);
-			dp[i] = max;
+		dp[0] = stairs[0];
+		if (N == 1) {
+			System.out.println(dp[0]);
+			return;
 		}
 		
-		System.out.println(Math.max(dp[N-1 - 3] + stairs[N-2] + stairs[N-1], dp[N-1 - 2] + stairs[N-1]));
+		dp[1] = stairs[0] + stairs[1];
+		if (N == 2) {
+			System.out.println(dp[1]);
+			return;
+		}
+		
+		dp[2] = Math.max(stairs[0], stairs[1]) + stairs[2];
+		if (N == 3) {
+			System.out.println(dp[2]);
+		}
+		
+		for (int i = 3; i < N; i++) {
+			dp[i] = Math.max(dp[i-3] + stairs[i-1] + stairs[i], dp[i-2] + stairs[i]);
+		}
+		
+		System.out.println(dp[N-1]);
 	}
 }
