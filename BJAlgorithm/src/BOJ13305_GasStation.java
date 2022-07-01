@@ -31,7 +31,6 @@ public class BOJ13305_GasStation {
 				nowPrice = price[i];
 			
 			if (i == price.length - 1 || price[i] < nowPrice) {
-				System.out.println("point : " + i + " / " + nowDist * nowPrice);
 				total += nowDist * nowPrice;
 				nowPrice = price[i];
 				nowDist = 0;
