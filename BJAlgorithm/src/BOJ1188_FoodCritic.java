@@ -5,25 +5,33 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class BOJ1188_FoodCritic {
+	
+	static int cnt = 0;
+	
 	public static void main(String[] args) throws IOException {
 		BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
 		String[] temp = in.readLine().split(" ");
 		int N = Integer.parseInt(temp[0]);
 		int M = Integer.parseInt(temp[1]);
 		
+		process(N, M);
+		System.out.println(cnt);
+		
+	}
+	
+	static void process(int N, int M) {
 		if (N > M)
 			N %= M;
 		
-		int common = 1;
-		int min = Math.max(N, M);
-		for (int i = 2; i <= min; i++) {
-			if (N % i == 0 && M % i == 0)
-				common = i;
+		if (N == 0)
+			return;
+
+		if (M % N == 0) {
+			cnt += M - N;
 		}
-		
-		if (M / common == 1)
-			System.out.println(0);
-		else
-			System.out.println((M/common - N/common) * N);
+		else {
+			cnt += M / N * N;
+			process(N, M % N);
+		}
 	}
 }
