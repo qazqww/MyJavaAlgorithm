@@ -1,3 +1,5 @@
+// https://www.acmicpc.net/problem/9251
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -20,48 +22,6 @@ public class BOJ9251_LCS {
 			}
 		}
 		
-		for (int i = 0; i < first.length() + 1; i++) {
-			for (int j = 0; j < second.length() + 1; j++) {
-				System.out.print(map[i][j] + "\t");
-			}
-			System.out.println();
-		}
-		
 		System.out.println(map[first.length()][second.length()]);
 	}
 }
-
-/*
- * X	0	s	e	c	o	n	d
- * 0	
- * f		0	0	0	0	0	0
- * i		0	0	0	0	0	0
- * r		0	0	0	0	0	0
- * s		1	1	1	1	1	1
- * t							
- * 
- */
-
-/*
- * X	0	s	u	c	c	e	s	s
- * 0	0	0	0	0	0	0	0	0
- * s	0	1	1	1	1	1	1	1	
- * s	0	1	1	1	1	1	2	2	
- * e	0	1	1	1	1	2	2	2	
- * s	0	1	1	1	1	2	3	3	
- * s									
- * 
- * 
- */
-
-/*
- * X	0	s	u	c	c	e	s	s
- * 0	0	0	0	0	0	0	0	0
- * s	0	1	1	1	1	1	1	1	
- * s	0	1	1	1	1	1	2	2	
- * c	0	1	1	2	2	2	2	2	
- * c	0	1	1	2	3	3	3	3	
- * e	0	1	1	2	3	4	4	4	
- * 
- * 
- */
