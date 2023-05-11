@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/AlgorithmStudy/AlgorithmStudy.iml" filepath="$PROJECT_DIR$/AlgorithmStudy/AlgorithmStudy.iml" />
+      <module fileurl="file://$PROJECT_DIR$/BJAlgorithm/BJAlgorithm.iml" filepath="$PROJECT_DIR$/BJAlgorithm/BJAlgorithm.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Jungol/Jungol.iml" filepath="$PROJECT_DIR$/Jungol/Jungol.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Others/Others.iml" filepath="$PROJECT_DIR$/Others/Others.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SWExpert/SWExpert.iml" filepath="$PROJECT_DIR$/SWExpert/SWExpert.iml" />
+    </modules>
+  </component>
+</project>
