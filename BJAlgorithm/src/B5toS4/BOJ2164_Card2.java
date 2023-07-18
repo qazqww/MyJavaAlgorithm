@@ -1,4 +1,4 @@
-// https://www.acmicpc.net/problem/2164
+package B5toS4;// https://www.acmicpc.net/problem/2164
 
 import java.util.LinkedList;
 import java.util.Queue;

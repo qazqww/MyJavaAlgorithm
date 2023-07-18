@@ -1,4 +1,4 @@
-// https://www.acmicpc.net/problem/2869
+package B5toS4;// https://www.acmicpc.net/problem/2869
 
 import java.io.BufferedReader;
 import java.io.IOException;
